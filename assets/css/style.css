@@ -3,3 +3,82 @@
     padding:0;
     box-sizing: border-box;
 }
+
+:root{
+    --header: #009688;
+    --main: #eaeaea;
+    --background: #dcdbd2;
+    --msg_bar: #f3eeea;
+}
+
+.debug{
+    border:1px solid black;
+}
+
+body{
+    height:100wh;
+}
+
+
+/***********************************************************
+Main elements
+************************************************************/
+
+#site_main{
+    background-color: var(--background);
+    height:100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#whatsapp{
+    height:95vh;
+    width:100%;
+    max-width:1150px;
+}
+#chat_section{
+    position:sticky;
+}
+
+#right_bar{
+    background-image: url("../img/background.jpg");
+}
+
+/***********************************************************
+Row and column structure
+************************************************************/
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin:0;
+    height:100%;
+}
+
+.col-4{
+    width:calc((100%/12)*4);
+
+}
+
+.col-8{
+    width:calc((100%/12)*8);
+}
+
+.row-1{
+    height:calc((100%/12)*1);
+}
+/***********************************************************
+Media rules
+************************************************************/
+
+/* second */
+@media screen and (max-width:941px){
+
+}
+
+/* mobile */
+@media screen and (max-width:540px){
+
+}
