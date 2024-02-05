@@ -38,14 +38,40 @@ Main elements
     width:100%;
     max-width:1150px;
 }
-#chat_section{
-    position:sticky;
+
+
+
+/* left bar with friend list */
+#left_bar{
+    height:100%;
+    background-color: var(--main);
+    overflow: hidden;
 }
 
+#chat_section{
+    /* position:sticky; */
+}
+
+#friend_list{
+
+}
+
+/* right bar with current chat */
 #right_bar{
+    position: relative;
     background-image: url("../img/background.jpg");
 }
 
+#current_chat{
+    background-color: var(--main);
+}
+
+#write_box{
+    position:absolute;
+    bottom:0%;
+    width:100%;
+    background-color: var(--msg_bar);
+}
 /***********************************************************
 Row and column structure
 ************************************************************/
@@ -68,6 +94,10 @@ Row and column structure
 
 .row-1{
     height:calc((100%/12)*1);
+}
+
+.row-10{
+    height:calc((100%/12)*10);
 }
 /***********************************************************
 Media rules
