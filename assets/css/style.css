@@ -10,6 +10,7 @@
     --background: #dcdbd2;
     --msg_bar: #f3eeea;
     --my_msg: #d5f9ba;
+    --icons: #b1b1b1;
 }
 
 .debug{
@@ -20,6 +21,30 @@ body{
     height:100wh;
 }
 
+ul{
+    list-style: none;
+}
+
+li{
+    display: inline;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.profile_img{
+    width: 75px;
+    height: 75px;
+
+    img{
+        width:100%;
+        height:100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
 
 /***********************************************************
 Main elements
@@ -37,20 +62,35 @@ Main elements
 #whatsapp{
     height:95vh;
     width:100%;
-    max-width:1150px;
+    max-width:1200px;
 }
-
-
 
 /* left bar with friend list */
 #left_bar{
+    position: relative;
     height:100%;
     background-color: var(--main);
     overflow: scroll;
 }
 
-#chat_section{
-    /* position:sticky; */
+#account{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem;
+    position:sticky;
+    top:0;
+    background-color: var(--main);
+}
+
+#buttons{
+    display: flex;
+    gap:1rem;
+    i{
+        font-size:1.5rem;
+        color: var(--icons);
+    }
 }
 
 #friend_list{
@@ -74,12 +114,9 @@ Main elements
     background-color: var(--msg_bar);
 }
 
-#messages{
-    
+#messages{  
     position:relative;
 }
-
-
 
 #my_msg{
     position:absolute;
@@ -102,6 +139,7 @@ Main elements
     background-color: white;
     padding:0.5rem;
 }
+
 /***********************************************************
 Row and column structure
 ************************************************************/
