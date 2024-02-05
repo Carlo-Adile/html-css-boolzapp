@@ -9,6 +9,7 @@
     --main: #eaeaea;
     --background: #dcdbd2;
     --msg_bar: #f3eeea;
+    --my_msg: #d5f9ba;
 }
 
 .debug{
@@ -45,7 +46,7 @@ Main elements
 #left_bar{
     height:100%;
     background-color: var(--main);
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #chat_section{
@@ -72,6 +73,35 @@ Main elements
     width:100%;
     background-color: var(--msg_bar);
 }
+
+#messages{
+    
+    position:relative;
+}
+
+
+
+#my_msg{
+    position:absolute;
+    left:8%;
+    top:8%;
+    width:50%;
+    height:40%;
+    border-radius: 1rem;
+    background-color: var(--my_msg);
+    padding:0.5rem;
+}
+
+#your_msg{
+    position:absolute;
+    right:8%;
+    top:50%;
+    width:50%;
+    height: 40%;
+    border-radius: 1rem;
+    background-color: white;
+    padding:0.5rem;
+}
 /***********************************************************
 Row and column structure
 ************************************************************/
@@ -94,6 +124,14 @@ Row and column structure
 
 .row-1{
     height:calc((100%/12)*1);
+}
+
+.row-2{
+    height:calc((100%/12)*2);
+}
+
+.row-8{
+    height:calc((100%/12)*8);
 }
 
 .row-10{
