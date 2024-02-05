@@ -5,12 +5,13 @@
 }
 
 :root{
-    --header: #009688;
+    --secondary: #009688;
     --main: #eaeaea;
     --background: #dcdbd2;
     --msg_bar: #f3eeea;
     --my_msg: #d5f9ba;
     --icons: #b1b1b1;
+    --notification: #8edafc;
 }
 
 .debug{
@@ -35,9 +36,9 @@ img{
 }
 
 .profile_img{
-    width: 75px;
-    height: 75px;
-
+    width: 70px;
+    height: 70px;
+    
     img{
         width:100%;
         height:100%;
@@ -65,7 +66,9 @@ Main elements
     max-width:1200px;
 }
 
-/* left bar with friend list */
+/***********************************************************
+left bar
+************************************************************/
 #left_bar{
     position: relative;
     height:100%;
@@ -73,11 +76,13 @@ Main elements
     overflow: scroll;
 }
 
+/* left bar > first section: account */
 #account{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    height:120px;
     padding:1rem;
     position:sticky;
     top:0;
@@ -93,11 +98,41 @@ Main elements
     }
 }
 
+/* left bar > second section: notification */
+#notification{
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    height:120px;
+    padding: 1rem;
+    background-color: var(--notification);
+    gap:0.75rem;
+
+    a{
+        color:var(--secondary);
+    }
+}
+
+#turn_on_btn{
+    width: 70px;
+    height:70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color:var(--notification);
+    border-radius:50%;
+    font-size:2rem;
+}
+
+/*  */
 #friend_list{
 
 }
 
-/* right bar with current chat */
+/***********************************************************
+right bar for current chat
+************************************************************/
 #right_bar{
     position: relative;
     background-image: url("../img/background.jpg");
@@ -153,7 +188,6 @@ Row and column structure
 
 .col-4{
     width:calc((100%/12)*4);
-
 }
 
 .col-8{
@@ -164,8 +198,11 @@ Row and column structure
     height:calc((100%/12)*1);
 }
 
+[class^="row-"]{
+    min-height: 80px;
+}
 .row-2{
-    height:calc((100%/12)*2);
+    height:calc((100%/12)*1.5);
 }
 
 .row-8{
@@ -181,10 +218,38 @@ Media rules
 
 /* second */
 @media screen and (max-width:941px){
+    .md-hide{
+        display:none;
+    }
 
+    .col-md-2{
+        width:calc((100%/12)*2);
+        min-width: 80px;
+    }
+
+    .col-md-10{
+        width:calc((100%/12)*10);
+    }
+
+    #whatsapp{
+        height:100vh;
+        width:100%;
+    }
+
+    #account{
+        justify-content: center;
+    }
+    #notification{
+        display: none;
+    }
 }
 
 /* mobile */
 @media screen and (max-width:540px){
-
+    .sm-hide{
+        display: none;
+    }
+    .col-sm-12{
+        width:100%;
+    }
 }
