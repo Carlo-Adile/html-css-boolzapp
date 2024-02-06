@@ -20,7 +20,7 @@
 } */
 
 body{
-    height:100wh;
+    height:100vh;
     background-color: var(--background);
     font-family: 'Lato';
 }
@@ -83,6 +83,7 @@ left bar
     align-items: center;
     justify-content: space-between;
     height:100px;
+    min-width:120px;
     padding:1rem 2rem 1rem 1rem;
     position:sticky;
     z-index: 100;
@@ -301,14 +302,6 @@ right bar for current chat
     border-radius: 0.5rem;
 }
 
-/* #buttons{
-    display: flex;
-    gap:1.5rem;
-    i{
-        font-size:1.5rem;
-        color: var(--icons);
-    }
-} */
 /***********************************************************
 Row and column structure
 ************************************************************/
@@ -356,6 +349,7 @@ Media rules
 
     #account{
         justify-content: center;
+        padding:0;
     }
 
     #notification, #chat_nav{
