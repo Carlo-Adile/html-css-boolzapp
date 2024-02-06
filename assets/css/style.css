@@ -157,8 +157,6 @@ input[type="text"] {
 #friend_list{
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center;
-    justify-content: center; */
     background-color: white;
 }
 
@@ -199,7 +197,6 @@ right bar for current chat
 /* right bar > first section: current chat bar */
 #current_chat{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     padding:1rem 2rem 1rem 1rem;
@@ -219,7 +216,6 @@ right bar for current chat
 
 #user_info{
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     gap:1rem;
 }
@@ -242,7 +238,7 @@ right bar for current chat
     left:5%;
     top:40%;
     width:60%;
-    min-width: 200px;
+    min-width: 275px;
     border-radius: 1rem;
     background-color: var(--my_msg);
     padding:1rem 3rem 1rem 1rem;
@@ -257,7 +253,7 @@ right bar for current chat
     right:5%;
     top:8%;
     width:60%;
-    min-width: 200px;
+    min-width: 275px;
     border-radius: 1rem;
     background-color: white;
     padding:1rem 3rem 1rem 1rem;
@@ -280,14 +276,39 @@ right bar for current chat
 
 /* right bar > last section: write a message on the current chat */
 #write_box{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:0rem 2rem 0rem 2rem;
     position:absolute;
     bottom:0%;
     width:100%;
     height:100px;
     background-color: var(--msg_bar);
     border:1px solid var(--main);
+    gap:2rem;
+
+    i{
+        font-size:1.5rem;
+        color: var(--secondary);
+    }
 }
 
+#write_input{
+    display: flex;
+    flex-grow: 1;
+    border-radius: 0.5rem;
+}
+
+/* #buttons{
+    display: flex;
+    gap:1.5rem;
+    i{
+        font-size:1.5rem;
+        color: var(--icons);
+    }
+} */
 /***********************************************************
 Row and column structure
 ************************************************************/
@@ -353,5 +374,8 @@ Media rules
     }
     .right-sm{
         width:100%;
+    }
+    #current_chat_buttons{
+        display: none;
     }
 }
