@@ -2,6 +2,7 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
 }
 
 :root{
@@ -14,12 +15,14 @@
     --notification: #8edafc;
 }
 
-.debug{
+/* .debug{
     border:1px solid black;
-}
+} */
 
 body{
     height:100wh;
+    background-color: var(--background);
+    font-family: 'Lato';
 }
 
 ul{
@@ -52,7 +55,6 @@ Main elements
 ************************************************************/
 
 #site_main{
-    background-color: var(--background);
     height:100vh;
     width:100%;
     display: flex;
@@ -127,12 +129,18 @@ left bar
 /* left bar > third section: chat nav bar */
 #chat_nav{
     display: flex;
+    align-items: center;
+    justify-content: center;
     width:100%;
     height:50px;
+    padding:0.5rem;
 }
 
 input[type="text"] {
-    width: 100%;
+    display:inline-block;
+    height:100%;
+    width:100%;
+    padding:1rem;
 }
 
 /* left bar > last section: friend_list */
@@ -141,15 +149,25 @@ input[type="text"] {
     flex-wrap: wrap;
     /* align-items: center;
     justify-content: center; */
+    background-color: white;
 }
 
 .friend{
     display: flex;
     align-items: center;
     padding:1rem;
-    gap:0.75rem;
+    gap:1rem;
     height:120px;
     width:100%;
+    border:1px solid var(--main);
+    line-height: 1.75rem;
+
+    h2{
+        font-weight: 300;
+    }
+    p{
+        color:var(--icons);
+    }
 }
 
 /***********************************************************
