@@ -237,11 +237,10 @@ right bar for current chat
     height:80%;
 }
 
-
 #my_msg{
     position:absolute;
     left:5%;
-    top:8%;
+    top:40%;
     width:60%;
     min-width: 200px;
     border-radius: 1rem;
@@ -256,13 +255,27 @@ right bar for current chat
 #your_msg{
     position:absolute;
     right:5%;
-    top:40%;
+    top:8%;
     width:60%;
     min-width: 200px;
-    height: 30%;
     border-radius: 1rem;
     background-color: white;
-    padding:0.5rem;
+    padding:1rem 3rem 1rem 1rem;
+}
+
+.timestamp_msg{
+    position:absolute;
+    bottom: 4%;
+    right:2%;
+    color:var(--icons);
+    font-size:0.7rem;
+}
+
+.chevron_msg{
+    position:absolute;
+    top: 1rem;
+    right:2%;
+    color:var(--icons);
 }
 
 /* right bar > last section: write a message on the current chat */
