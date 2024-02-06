@@ -63,8 +63,8 @@ Main elements
 
 #whatsapp{
     height:95vh;
-    width:100%;
-    max-width:1200px;
+    width:90%;
+    max-width:1440px;
 }
 
 /***********************************************************
@@ -83,7 +83,7 @@ left bar
     align-items: center;
     justify-content: space-between;
     height:100px;
-    padding:1rem;
+    padding:1rem 2rem 1rem 1rem;
     position:sticky;
     z-index: 100;
     top:0;
@@ -93,7 +93,7 @@ left bar
 
 #buttons{
     display: flex;
-    gap:1rem;
+    gap:1.5rem;
     i{
         font-size:1.5rem;
         color: var(--icons);
@@ -184,7 +184,7 @@ input[type="text"] {
 
 .timestamp{
     position: absolute;
-    top:15%;
+    top:11%;
     right:5%;
 }
 
@@ -196,47 +196,88 @@ right bar for current chat
     background-image: url("../img/background.jpg");
 }
 
+/* right bar > first section: current chat bar */
 #current_chat{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 2rem 1rem 1rem;
+    gap:1rem;
     background-color: var(--main);
+    height:100px;
+    border:1px solid var(--main);
+
+    h2{
+        font-weight: 300;
+        line-height: 2.5rem;
+    }
+    p{
+        color:var(--secondary);
+    }
 }
 
-#write_box{
-    position:absolute;
-    bottom:0%;
-    width:100%;
-    background-color: var(--msg_bar);
+#user_info{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:1rem;
 }
 
-#messages{  
+#current_chat_buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:1rem;
+}
+
+/* right bar > second section: read messages in the current chat */
+#messages{
     position:relative;
+    height:80%;
 }
+
 
 #my_msg{
     position:absolute;
-    left:8%;
+    left:5%;
     top:8%;
-    width:50%;
-    height:40%;
+    width:60%;
+    min-width: 200px;
     border-radius: 1rem;
     background-color: var(--my_msg);
-    padding:0.5rem;
+    padding:1rem 3rem 1rem 1rem;
+
+    p{
+        line-height:1.2rem;
+    }
 }
 
 #your_msg{
     position:absolute;
-    right:8%;
-    top:50%;
-    width:50%;
-    height: 40%;
+    right:5%;
+    top:40%;
+    width:60%;
+    min-width: 200px;
+    height: 30%;
     border-radius: 1rem;
     background-color: white;
     padding:0.5rem;
 }
 
+/* right bar > last section: write a message on the current chat */
+#write_box{
+    position:absolute;
+    bottom:0%;
+    width:100%;
+    height:100px;
+    background-color: var(--msg_bar);
+    border:1px solid var(--main);
+}
+
 /***********************************************************
 Row and column structure
 ************************************************************/
-
 .row{
     display: flex;
     flex-wrap: wrap;
@@ -252,30 +293,11 @@ Row and column structure
     width:calc((100%/12)*8);
 }
 
-.row-1{
-    height:calc((100%/12)*1);
-}
-
-[class^="row-"]{
-    min-height: 80px;
-}
-.row-2{
-    height:calc((100%/12)*1.5);
-}
-
-.row-8{
-    height:calc((100%/12)*8);
-}
-
-.row-10{
-    height:calc((100%/12)*10);
-}
-
 /***********************************************************
 Media rules
 ************************************************************/
 
-/* second */
+/* second/medium */
 @media screen and (max-width:941px){
     .md-hide{
         display:none;
@@ -311,7 +333,7 @@ Media rules
     }
 }
 
-/* mobile */
+/* small/mobile */
 @media screen and (max-width:540px){
     .sm-hide{
         display: none;
