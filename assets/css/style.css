@@ -3,6 +3,7 @@
     padding:0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    scrollbar-width: none;
 }
 
 :root{
@@ -73,7 +74,9 @@ left bar
 #left_bar{
     position: relative;
     height:100%;
-    overflow: scroll;
+    /* overflow: scroll; */
+    overflow: hidden;
+    
 }
 
 /* left bar > first section: account */
@@ -142,6 +145,10 @@ left bar
     z-index: 100;
     top:220px;
     background-color: var(--main);
+
+    i{
+        display: inline;
+    }
 }
 
 input[type="text"] {
@@ -156,9 +163,12 @@ input[type="text"] {
 
 /* left bar > last section: friend_list */
 #friend_list{
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     background-color: white;
+    overflow-y: scroll;
+    height:100%;
+    height:calc(100% - 280px);
 }
 
 .friend{
@@ -230,14 +240,19 @@ right bar for current chat
 
 /* right bar > second section: read messages in the current chat */
 #messages{
-    position:relative;
+    display: flex;
     height:80%;
+    overflow-y: scroll;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap:1rem;
 }
 
 #my_msg{
-    position:absolute;
-    left:5%;
-    top:40%;
+    position:relative;
+    display: flex;
+    align-self: flex-end;
     width:60%;
     min-width: 275px;
     border-radius: 1rem;
@@ -250,9 +265,9 @@ right bar for current chat
 }
 
 #your_msg{
-    position:absolute;
-    right:5%;
-    top:8%;
+    position:relative;
+    display: flex;
+    align-self: flex-start;
     width:60%;
     min-width: 275px;
     border-radius: 1rem;
