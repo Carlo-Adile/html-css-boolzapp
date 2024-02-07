@@ -24,6 +24,7 @@ body{
     height:100vh;
     background-color: var(--background);
     font-family: 'Lato';
+    background-image: linear-gradient(var(--icons), var(--background));
 }
 
 ul{
@@ -74,9 +75,7 @@ left bar
 #left_bar{
     position: relative;
     height:100%;
-    /* overflow: scroll; */
-    overflow: hidden;
-    
+    overflow: hidden;   
 }
 
 /* left bar > first section: account */
