@@ -23,7 +23,6 @@
 body{
     height:100vh;
     background-color: var(--background);
-    font-family: 'Lato';
     background-image: linear-gradient(var(--icons), var(--background));
 }
 
@@ -61,6 +60,14 @@ Main elements
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.colored_section{
+    display: inline;
+    position:absolute;
+    height:130px;
+    width:100%;
+    background-color: var(--secondary);
 }
 
 #whatsapp{
@@ -151,11 +158,11 @@ left bar
 }
 
 input[type="text"] {
-    display:inline-block;
     height:100%;
     width:100%;
     padding:1rem;
     border: 1px solid var(--background);
+    border-radius:0.5rem;
     font-size: 1rem;
     color:var(--icons);
 }
