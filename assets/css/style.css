@@ -370,6 +370,10 @@ Media rules
         display: none;
     }
 
+    #friend_list{
+        height:calc(100% - 100px);
+        
+    }
     .friend{
         justify-content: center;
     }
